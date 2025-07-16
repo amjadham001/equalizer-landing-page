@@ -15,26 +15,102 @@
 		<title>Frontend Mentor | Equalizer landing page</title>
 	</head>
 	<body>
-		<h1 class="text-8xl text-red-500">Hello World!!!</h1>
-		<!-- 
-      We make your music sound extraordinary.
+		<div class="">
+			<div>
+				<picture>
+					<source
+						media="(min-width: 80rem)"
+						srcset="./assets/bg-main-desktop.png"
+					/>
+					<source
+						media="(min-width: 48rem)"
+						srcset="./assets/bg-main-tablet.png"
+					/>
+					<img src="./assets/bg-main-mobile.png" alt="" />
+				</picture>
+			</div>
 
-      A system audio equalizer specifically designed for Android and iOS. Freely tune the 
-      way your music sounds with a professional grade parametric EQ & volume mixer. Control 
-      bass, mids, treble, gain control, reverb, and more!
+			<header>
+				<nav>
+					<img src="./assets/logo.svg" alt="Equalizer Logo" />
+				</nav>
 
-      Premium EQ
+				<img src="./assets/bg-pattern-1.svg" alt="" />
 
-      Get expert-level control with a robust equalizer, volume mixer, and spatial audio. Take 
-      your listening experience to a whole new level and access all our incredible features!
+				<section>
+					<h1>We make your music sound extraordinary</h1>
 
-      $4 / month
+					<p>
+						A system audio equalizer specifically designed for Android and iOS.
+						Freely tune the way your music sounds with a professional grade
+						parametric EQ & volume mixer. Control bass, mids, treble, gain
+						control, reverb, and more!
+					</p>
+				</section>
+			</header>
 
-      iOS Download
-      Android Download
+			<main>
+				<div>
+					<img src="./assets/bg-pattern-2.svg" alt="" />
 
-      All rights reserved © Equalizer 2021
-      Have any problems? Contact us via social media or email us at equalizer@example.com
-    -->
+					<img src="./assets/illustration-app.png" alt="" />
+
+					<section>
+						<h2>Premium EQ</h2>
+
+						<p>
+							Get expert-level control with a robust equalizer, volume mixer,
+							and spatial audio. Take your listening experience to a whole new
+							level and access all our incredible features!
+						</p>
+
+						<p>
+							<data value="4">$4</data>
+							<span>/ month</span>
+						</p>
+
+						<div>
+							<button>
+								<img src="./assets/icon-apple.svg" alt="" />
+								iOS Download
+							</button>
+							<button>
+								<img src="./assets/icon-android.svg" alt="" />
+								Android Download
+							</button>
+						</div>
+					</section>
+				</div>
+			</main>
+
+			<footer>
+				<img src="./assets/logo.svg" alt="Equalizer Logo" />
+
+				<div>
+					<p>
+						All rights reserved &copy; Equalizer
+						<time datetime="2021">2021</time>
+					</p>
+
+					<p>Have any problems? Contact us via social media or email us at</p>
+
+					<address>
+						<a href="mailto:equalizer@example.com">equalizer@example.com</a>
+					</address>
+				</div>
+
+				<address>
+					<a href="#">
+						<img src="./assets/icon-facebook.svg" alt="" />
+					</a>
+					<a href="">
+						<img src="./assets/icon-instagram.svg" alt="" />
+					</a>
+					<a href="#">
+						<img src="./assets/icon-twitter.svg" alt="" />
+					</a>
+				</address>
+			</footer>
+		</div>
 	</body>
 </html>
