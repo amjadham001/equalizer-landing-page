@@ -18,6 +18,5 @@
 # Avoid accidental upload of the node_modules folder
 node_modules/
 
-# Avoid accidental upload of the test.html & _notes.txt files
+# Avoid accidental upload of the _notes.txt file
 _notes.txt
-test.html

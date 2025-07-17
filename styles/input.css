@@ -1,1 +1,98 @@
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&display=swap");
 @import "tailwindcss";
+
+@theme {
+	/* equalizer colors */
+	--color-equalizer-cyan: #66e2dc;
+	--color-equalizer-orange: #fa7453;
+	--color-equalizer-yellow: #ffb964;
+	--color-equalizer-white: #fcfaf9;
+	--color-equalizer-slate: #191826;
+
+	/* equalizer font */
+	--font-ibm-plex-snas: "IBM Plex Sans", sans-serif;
+}
+
+@layer components {
+	/* equalizer grid */
+	.equalizer-grid {
+		@apply grid grid-cols-[1fr_repeat(4,minmax(3.5rem,4rem))_1fr] gap-x-4 md:grid-cols-[1fr_repeat(8,4rem)_1fr] md:gap-x-6 xl:grid-cols-[1fr_repeat(12,4rem)_1fr] xl:gap-x-8;
+	}
+
+	/* equalizer typography */
+	.equalizer-typography-1 {
+		@apply text-[2.5rem] leading-[100%] font-bold -tracking-[1px];
+
+		@variant md {
+			@apply text-[4rem];
+		}
+
+		@variant xl {
+			@apply text-[5.5rem];
+		}
+	}
+	.equalizer-typography-2 {
+		@apply text-[4rem] leading-[100%] font-bold;
+	}
+	.equalizer-typography-3 {
+		@apply text-[2.5rem] leading-[110%] font-bold;
+	}
+	.equalizer-typography-4 {
+		@apply text-base leading-[150%] font-normal;
+
+		@variant md {
+			@apply text-lg;
+		}
+
+		@variant xl {
+			@apply text-xl;
+		}
+	}
+	.equalizer-typography-5-bold {
+		@apply text-base leading-[150%] font-bold;
+	}
+	.equalizer-typography-5 {
+		@apply text-base leading-[150%] font-normal;
+	}
+	.equalizer-typography-6 {
+		@apply text-lg leading-[180%] font-bold;
+	}
+
+	/* equalizer logo */
+	.equalizer-logo {
+		@apply w-36;
+	}
+
+	/* equalizer icons */
+	.equalizer-icon {
+		@apply flex size-6 items-center justify-center;
+	}
+
+	/* equalizer buttons */
+	.equalizer-btn {
+		--btn-txt-color: var(--color-slate-900, #000);
+		--btn-bg-color: var(--color-gray-100, #eee);
+
+		@apply flex items-center justify-center gap-2 rounded-xl bg-(--btn-bg-color) px-8 py-4 text-lg leading-[180%] font-bold text-(--btn-txt-color);
+
+		@variant hover {
+			@apply cursor-pointer bg-[--alpha(var(--btn-bg-color)/85%)] shadow-sm;
+		}
+	}
+	.equalizer-btn--slate {
+		--btn-txt-color: var(--color-equalizer-white);
+		--btn-bg-color: var(--color-equalizer-slate);
+	}
+	.equalizer-btn--cyan {
+		--btn-txt-color: var(--color-equalizer-slate);
+		--btn-bg-color: var(--color-equalizer-cyan);
+	}
+	.equalizer-btn--white {
+		--btn-txt-color: var(--color-equalizer-slate);
+		--btn-bg-color: var(--color-equalizer-white);
+	}
+	.equalizer-btn--yellow {
+		--btn-txt-color: var(--color-equalizer-slate);
+		--btn-bg-color: var(--color-equalizer-yellow);
+	}
+}
