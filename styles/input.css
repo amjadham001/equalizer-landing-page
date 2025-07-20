@@ -65,7 +65,11 @@
 
 	/* equalizer icons */
 	.equalizer-icon {
-		@apply flex size-6 items-center justify-center;
+		@apply flex size-8 items-center justify-center;
+
+		svg {
+			@apply fill-current;
+		}
 	}
 
 	/* equalizer buttons */
@@ -73,10 +77,10 @@
 		--btn-txt-color: var(--color-slate-900, #000);
 		--btn-bg-color: var(--color-gray-100, #eee);
 
-		@apply flex items-center justify-center gap-2 rounded-xl bg-(--btn-bg-color) px-8 py-4 text-lg leading-[180%] font-bold text-(--btn-txt-color);
+		@apply flex items-center justify-center gap-2 rounded-xl bg-(--btn-bg-color) px-8 py-4 text-lg leading-[180%] font-bold text-(--btn-txt-color) transition;
 
 		@variant hover {
-			@apply cursor-pointer bg-[--alpha(var(--btn-bg-color)/85%)] shadow-sm;
+			@apply scale-104 cursor-pointer;
 		}
 	}
 	.equalizer-btn--slate {
