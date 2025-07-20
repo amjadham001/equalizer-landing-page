@@ -74,29 +74,27 @@
 
 	/* equalizer buttons */
 	.equalizer-btn {
-		--btn-txt-color: var(--color-slate-900, #000);
-		--btn-bg-color: var(--color-gray-100, #eee);
+		--btn-txt-color: var(--color-slate-900, #000000);
+		--btn-bg-color: var(--color-gray-100, #eeeeee);
+		--btn-hover-txt-color: var(--btn-txt-color, #000000);
+		--btn-hover-bg-color: var(--color-gray-200, #e0e0e0);
 
 		@apply flex items-center justify-center gap-2 rounded-xl bg-(--btn-bg-color) px-8 py-4 text-lg leading-[180%] font-bold text-(--btn-txt-color) transition;
 
 		@variant hover {
-			@apply scale-104 cursor-pointer;
+			@apply cursor-pointer bg-(--btn-hover-bg-color) text-(--btn-hover-txt-color);
 		}
 	}
 	.equalizer-btn--slate {
 		--btn-txt-color: var(--color-equalizer-white);
 		--btn-bg-color: var(--color-equalizer-slate);
-	}
-	.equalizer-btn--cyan {
-		--btn-txt-color: var(--color-equalizer-slate);
-		--btn-bg-color: var(--color-equalizer-cyan);
+		--btn-hover-txt-color: var(--color-equalizer-slate);
+		--btn-hover-bg-color: var(--color-equalizer-cyan);
 	}
 	.equalizer-btn--white {
 		--btn-txt-color: var(--color-equalizer-slate);
 		--btn-bg-color: var(--color-equalizer-white);
-	}
-	.equalizer-btn--yellow {
-		--btn-txt-color: var(--color-equalizer-slate);
-		--btn-bg-color: var(--color-equalizer-yellow);
+		--btn-hover-txt-color: var(--btn-txt-color);
+		--btn-hover-bg-color: var(--color-equalizer-yellow);
 	}
 }
